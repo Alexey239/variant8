@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+   <header>
+    <div class="logo">Armani<span><i>EA7</i></span></div>
+    <div class="nav"><a href="#">Главная</a><a href="#">О нас</a><a href="#">Магазин</a><a href="#">Контакты</a></div>
+   </header>
+   <main>
+
+     <div class="a">
+       <h2>СЕЗОН 2024</h2>
+       <hr>
+        <div class="times">
+           <a href="#"><div><img src="img/time1.png" alt=""></div>Louis XVI</a>
+           <a href="#"><div><img src="img/time1.png" alt=""></div>Louis XVI</a>
+           <a href="#"><div><img src="img/time1.png" alt=""></div>Louis XVI</a>
+           <a href="#"><div><img src="img/time1.png" alt=""></div>Louis XVI</a>
+           <a href="#"><div><img src="img/time1.png" alt=""></div>Louis XVI</a>
+           <a href="#"><div><img src="img/time1.png" alt=""></div>Louis XVI</a>
+           <a href="#"><div><img src="img/time1.png" alt=""></div>Louis XVI</a>
+           <a href="#"><div><img src="img/time1.png" alt=""></div>Louis XVI</a>
+           <a href="#"><div><img src="img/time1.png" alt=""></div>Louis XVI</a>
+        </div>
+     </div>
+     <div class="b"><h2>КОЛЛЕКЦИЯ 2024</h2><hr>
+                  <!-- slider -->
+                  <div class="slideshow">
+                     <div class="slideshow-item">
+                         <img src="img/image1.jpg" alt="">
+                     </div>
+                     <div class="slideshow-item">
+                         <img src="img/image2.jpg" alt="">
+                     </div>
+                     <div class="slideshow-item">
+                         <img src="img/image3.jpg" alt="">
+                     </div>
+                     <div class="slideshow-item">
+                         <img src="img/image4.jpg" alt="">
+                     </div>
+                 </div>
+                 <!-- slider -->
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non rutrum ornare ut mattis habitant dui arcu. Sagittis amet nunc ut neque quis nibh arcu. Vivamus vestibulum nisi et venenatis sed scelerisque magna consectetur. Amet convallis quis gravida facilisis vulputate. Faucibus facilisi habitasse ipsum interdum dictum aliquet. Velit quis ullamcorper pulvinar nulla malesuada integer. Aenean praesent viverra nulla nullam natoque volutpat curabitur auctor. Viverra viverra ullamcorper scelerisque risus dignissim egestas. Id aliquam a aliquam egestas leo orci pharetra sed diam. </p></div>
+     <div class="c">
+        <div class="information"><h2>О МАГАЗИНЕ</h2>
+        <hr>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non rutrum ornare ut mattis habitant dui arcu. Sagittis amet nunc ut neque quis nibh arcu. Vivamus vestibulum nisi et venenatis sed scelerisque magna consectetur. Amet convallis quis gravida facilisis vulputate. Faucibus facilisi habitasse ipsum interdum dictum aliquet. Velit quis ullamcorper pulvinar nulla malesuada integer. Aenean praesent viverra nulla nullam natoque volutpat curabitur auctor. Viverra viverra ullamcorper scelerisque risus dignissim egestas. Id aliquam a aliquam egestas leo orci pharetra sed diam. </p>
+      </div>
+        <div class="call"><h2>ФОРМА ОБРАТНОЙ СВЯЗИ</h2>
+      <hr>
+      <button id="openModal">Оставить заявку</button>
+
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <button class="close">X</button>
+          <form action="#" method="post" target="_blank">
+            <ul>
+               <li>
+                 <label for="name">Имя:*</label>
+                 <input type="text" name="name" placeholder="Иван Иванов" id="name" required>
+               </li>
+               </ul>
+               <ul>
+                  <li>
+                    <label for="email">E-mail:*</label>
+                    <input type="email" name="mail" placeholder="ivanov@gmail.com" id="email" required>
+                  </li>
+                  </ul>
+                  <ul>
+                  <li>
+                    <label for="number">Телефон:*</label>
+                    <input type="tel" name="phone" placeholder="+7 (800) 123 45 67" id="number" maxlength="11" required>
+                  </li>
+                </ul>
+                <button type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+      </div>
+     </div>
+   </main>
+   <footer>
+      <div class="a">Все права защищены &copy;</div>
+      <div class="b"><ul>
+         <li><a href="#"><img src="img/icon3.svg" alt=""></a></li>
+         <li><a href="#"><img src="img/icon4.svg" alt=""></a></li>
+         <li><a href="#"><img src="img/icon5.svg" alt=""></a></li>
+         <li><a href="#"><img src="img/icon6.svg" alt=""></a></li>
+         <li><a href="#"><img src="img/icon7.svg" alt=""></a></li>
+      </ul></div>
+   </footer>
+
+<script>
+   const modal = document.querySelector('#modal');
+const btn = document.querySelector('#openModal');
+const close = document.querySelector('.close');
+
+btn.onclick = function () {
+  modal.style.display = 'block';
+};
+
+close.onclick = function () {
+  modal.style.display = 'none';
+};
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = 'none';
+  }
+};
+</script>
+
+</body>
+</html>

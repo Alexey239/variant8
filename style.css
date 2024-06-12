@@ -1,0 +1,448 @@
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header{
+    display: flex;
+}
+header div{
+    height: 50px;
+}
+header .logo{
+    width: 33.5%;
+    background-color: black;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+}
+header .nav{
+    width: 67%;
+    background-color: black;
+}
+main{
+    display: flex;
+    flex-grow: 1;
+}
+main .a{
+    background-color: #36454F;
+    width: 33.333%;
+    padding-bottom: 1vw;
+    color: white;
+}
+main .b{
+    background-color: grey;
+    width: 33.333%;
+    color: white;
+}
+main .c{
+    width: 33.333%;
+}
+main .c{
+    display: flex;
+    flex-direction: column;
+}
+main .c .information{
+    background-color: #36454F;
+    height: 50%;
+    color: white;
+}
+main .c .call{
+    background-color: brown;
+    height: 50%;
+}
+main .c .call h2{
+    color: white;
+}
+footer{
+display: flex;
+height: 50px;
+flex-shrink: 0;
+background: black;
+}
+footer .a{
+    width: 67%;
+    background-color: black;
+}
+footer .b{
+    width: 33.2%;
+    background-color: black;
+}
+
+header .logo{
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+header .logo span{
+    font-weight: bold;
+} 
+header .nav a{
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 16px;
+}
+header .nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+header .nav a:hover{
+background-color: #2b2b2b;
+}
+main .a h2{
+    text-align: center;
+    margin-bottom: 0.9vw;
+}
+main .a hr,
+main .b hr,
+main .c .information hr,
+main .c .call hr{
+    width: 20%;
+    color: white;
+}
+main .a{
+    display: flex;
+    flex-direction: column;
+}
+main .a .times{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2vw;
+    text-align: center;
+    align-self: center;
+    margin-top: 1.5vw; 
+}
+main .a a{
+    color: white;
+    text-decoration: none;
+}
+main .a .times div{
+width: 8vw;
+height: 9vw;
+background-color: wheat;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 0.7vw;
+}
+main .a .times a div img:hover{
+    width: 90%; 
+}
+main .a .times div img{
+width: 100%;
+}
+main .b{
+text-align: center;
+}
+main .b p{
+padding-left: 0.7vw;
+padding-right: 0.7vw;
+}
+
+/* slider */
+
+.slideshow {
+    width: 95%;
+    height: 15vw;
+    position: relative;
+    overflow: hidden;
+    background: #000;
+    margin: 30px 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.9vw;
+}
+.slideshow-item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    animation: slideanim 40s infinite;
+    pointer-events: none;
+}
+.slideshow-item:nth-child(1),
+.slideshow-item:nth-child(1) img {
+    animation-delay: 0;
+}
+.slideshow-item:nth-child(2),
+.slideshow-item:nth-child(2) img {
+    animation-delay: 10s;
+}
+.slideshow-item:nth-child(3),
+.slideshow-item:nth-child(3) img {
+    animation-delay: 20s;
+}
+.slideshow-item:nth-child(4),
+.slideshow-item:nth-child(4) img {
+    animation-delay: 30s;
+}
+.slideshow-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: zoom 40s infinite;
+}
+@keyframes slideanim {
+    12.5%{
+        opacity: 1;
+        pointer-events: auto;
+    }
+    25%{
+        opacity: 1;
+        pointer-events: auto;
+    }    
+    37.5%{
+        opacity: 0;
+    }
+}
+@keyframes zoom {
+    50%{
+        transform: scale(1.3);
+    }    
+}
+
+/* slider */
+
+main .c .information{
+    text-align: center;
+}
+main .c .information p{
+padding-left: 0.7vw;
+padding-right: 0.7vw;
+margin-top: 1.5vw;
+} 
+main .c .call{
+    text-align: center;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal-content {
+    background-color: white;
+    width: 500px;
+    height: 450px;
+    margin: 10% auto;
+  }
+  
+  .close {
+    font-size: 16px;
+    padding: 5px 10px;
+    position: relative;
+    left: 222px;
+    top: 10px;
+    cursor: pointer;
+  }
+  
+  .modal-content div{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 80%;
+  }
+  #openModal{
+    padding: 10px 30px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+  }
+  #openModal:hover{
+    background-color: rgba(250, 250, 250, 0.2);
+  }
+  main ul{
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: auto; 
+    padding: 0px;
+    width: 80%;
+  }
+  main ul li{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  main ul li input{
+    height: 40px;
+  }
+  .modal-content button:last-child{
+    font-size: 16px;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  main form{
+    margin-top: 67px;
+  }
+  /* footer */
+  footer{
+   border-top: 1px solid white;
+} 
+  footer .a{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid white;
+  }
+  footer .b{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  footer .b ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    margin: 0;
+  }
+  footer .b ul li{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+   footer .b ul li img:hover{
+    width: 125%;
+  } 
+
+  /* адаптивность */
+
+  @media (max-width: 1095px){
+    main .a h2 {
+        font-size: 2vw;
+      }
+      main .b h2{
+        font-size: 2vw;
+      }
+      main .c .information h2{
+        font-size: 2vw;
+      }
+      main .c .call h2 {
+        font-size: 2vw;
+      }
+  }
+
+  @media (max-width: 1024px) {
+    main{
+        flex-wrap: wrap;
+    }
+    main .a{
+        width: 50%;
+    }
+    main .b{
+        width: 50%;
+    }
+     main .c{
+        width: 100%;
+       display: flex;
+       flex-direction: row-reverse;
+    } 
+    .slideshow{
+        height: 20vw;
+    }
+    main .a .times div{
+        width: 12vw;
+        height: 14vw;
+    }
+     main .c .information{
+        width: 50%;
+        height: 100%;
+    } 
+    main .c .call{
+        width: 50%;
+        height: 100%;
+    } 
+  }
+  
+  @media (max-width: 720px){
+    main .a{
+        width: 100%;
+    }
+    main .b{
+        width: 100%;
+    }
+    main .a .times div {
+        width: 20vw;
+        height: 22vw;
+      }
+      main .a .times{
+        grid-gap: 5vw;
+        margin-bottom: 4vw;
+      }
+      .slideshow {
+        height: 35vw;
+      }
+      main .c .information {
+        padding-bottom: 4vw;
+  }
+  footer .b ul li {
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
+  main .a h2, 
+  main .b h2,
+  main .c .call h2,
+  main .c .information h2{
+    font-size: 4vw;
+  }
+  main .c{
+    flex-direction: column;
+  }
+  main .c .information{
+    width: 100%;
+}
+main .c .call{
+    width: 100%;
+    padding-bottom: 5vw;}
+}
+
+@media (max-width: 593px){
+    header{
+        flex-direction: column;
+    }
+    header .logo{
+        width: 100%;
+    }
+    header .nav{
+        width: 100%;
+    }
+    footer{
+      flex-direction: column-reverse;
+    }
+    footer .a{
+        width: 100%;
+    }
+    footer .b{
+        width: 100%;
+    }
+    footer ul{
+        padding: 0px;
+    }
+    header .nav a{
+        font-size: 14px;
+    }
+}
+@media (max-width: 537px){
+    .modal-content {
+        width: 350px;
+    }
+    .close{
+        left: 149px;
+    }
+}
